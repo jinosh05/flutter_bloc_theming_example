@@ -4,22 +4,33 @@ import 'package:flutter_bloc_theming_example/domain/cubit/cubit/theme_cubit.dart
 import 'package:flutter_bloc_theming_example/presentation/home_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const BaseApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({Key? key}) : super(key: key);
+class BaseApp extends StatelessWidget {
+  const BaseApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-        providers: [
-          BlocProvider<ThemeCubit>(
-            create: (context) => ThemeCubit(),
-          )
-        ],
-        child: const MaterialApp(
-          home: HomeScreen(),
-        ));
+    return MultiBlocProvider(providers: [
+      BlocProvider<ThemeCubit>(
+        create: (context) => ThemeCubit(),
+      )
+    ], child: const MyApp());
+  }
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    ThemeCubit themeCubit = BlocProvider.of<ThemeCubit>(context, listen: true);
+    bool isDark = themeCubit.isDark;
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: isDark ? ThemeData.dark() : ThemeData.light(),
+      home: const HomeScreen(),
+    );
   }
 }
