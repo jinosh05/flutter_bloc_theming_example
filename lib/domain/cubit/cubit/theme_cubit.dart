@@ -5,7 +5,7 @@ part 'theme_state.dart';
 
 // Values are stored and updated here
 class ThemeCubit extends Cubit<ThemeState> {
-  ThemeCubit() : super(ThemeInitial());
+  ThemeCubit() : super(ThemeLight(message: 'Light Theme'));
 
   bool _isDark = false;
 
@@ -13,6 +13,10 @@ class ThemeCubit extends Cubit<ThemeState> {
 
   void toggleTheme() {
     _isDark = !_isDark;
-    emit(ThemeChanged());
+    if (_isDark) {
+      emit(ThemeDark(message: 'Dark Theme'));
+    } else {
+      emit(ThemeLight(message: 'Light Theme'));
+    }
   }
 }
