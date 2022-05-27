@@ -13,7 +13,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    ThemeCubit themeCubit = BlocProvider.of<ThemeCubit>(context, listen: false);
+    ThemeCubit themeCubit = BlocProvider.of<ThemeCubit>(context, listen: true);
+
     return Scaffold(
       appBar: AppBar(actions: [
         IconButton(
