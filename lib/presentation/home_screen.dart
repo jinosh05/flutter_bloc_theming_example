@@ -32,7 +32,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: Center(
-        child: Text(isDark ? 'Hello Good Evening' : 'Hello Good Morning'),
+        child: Image.asset(
+          isDark ? 'assets/evening.png' : 'assets/namaste.png',
+          height: 350,
+        ),
       ),
     );
   }
