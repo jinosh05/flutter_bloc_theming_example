@@ -14,15 +14,18 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     ThemeCubit themeCubit = BlocProvider.of<ThemeCubit>(context, listen: true);
-
+    bool isDark = themeCubit.isDark;
     return Scaffold(
-      appBar: AppBar(actions: [
-        IconButton(
-            onPressed: () {
-              themeCubit.toggleTheme();
-            },
-            icon: const Icon(Icons.dark_mode))
-      ]),
+      appBar: AppBar(
+        elevation: 0,
+        actions: [
+          IconButton(
+              onPressed: () {
+                themeCubit.toggleTheme();
+              },
+              icon: const Icon(Icons.dark_mode))
+        ],
+      ),
     );
   }
 }

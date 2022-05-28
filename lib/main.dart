@@ -29,7 +29,15 @@ class MyApp extends StatelessWidget {
     bool isDark = themeCubit.isDark;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: isDark ? ThemeData.dark() : ThemeData.light(),
+      theme: isDark
+          ? ThemeData.dark().copyWith(
+              appBarTheme: AppBarTheme(
+              backgroundColor: ThemeData.dark().canvasColor,
+            ))
+          : ThemeData.light().copyWith(
+              appBarTheme: AppBarTheme(
+              backgroundColor: ThemeData.light().canvasColor,
+            )),
       home: const HomeScreen(),
     );
   }
