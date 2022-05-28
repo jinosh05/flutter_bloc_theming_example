@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Center(
         child: Image.asset(
-          isDark ? 'assets/evening.png' : 'assets/namaste.png',
+          isDark ? 'assets/night.png' : 'assets/namaste.png',
           height: 350,
         ),
       ),
