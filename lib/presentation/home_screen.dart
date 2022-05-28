@@ -23,8 +23,20 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 themeCubit.toggleTheme();
               },
-              icon: const Icon(Icons.dark_mode))
+              icon: Icon(
+                isDark ? Icons.light_mode : Icons.dark_mode,
+                color: isDark
+                    ? ThemeData.light().canvasColor
+                    : ThemeData.dark().canvasColor,
+              ))
         ],
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Text(isDark ? 'Hello Good Evening' : 'Hello Good Morning')
+          ],
+        ),
       ),
     );
   }
