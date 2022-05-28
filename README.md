@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Flutter Bloc Theming Example
 
-Simple working example of Theming in Flutter using Flutter using Flutter Bloc. 
+Simple working example of Theming in Flutter using Flutter Bloc. 
 
 ## Packages Used
 
