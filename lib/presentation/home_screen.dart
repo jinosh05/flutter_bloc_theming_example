@@ -32,11 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: Center(
-        child: Column(
-          children: [
-            Text(isDark ? 'Hello Good Evening' : 'Hello Good Morning')
-          ],
-        ),
+        child: Text(isDark ? 'Hello Good Evening' : 'Hello Good Morning'),
       ),
     );
   }
