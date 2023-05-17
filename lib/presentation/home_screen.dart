@@ -38,13 +38,13 @@ class _HomeScreenState extends State<HomeScreen> {
             Text(
               isDark ? 'Hello,\nGood night 🥱' : 'Hello,\nGood Morning 🌅 ',
               textAlign: TextAlign.center,
-              style: TextStyle(height: 1.5, fontSize: 20),
+              style: const TextStyle(height: 1.5, fontSize: 20),
             ),
             Image.asset(
               isDark ? 'assets/night.png' : 'assets/namaste.png',
               height: 250,
             ),
-            SizedBox()
+            const SizedBox()
           ],
         ),
       ),
