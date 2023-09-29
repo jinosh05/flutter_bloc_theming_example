@@ -57,6 +57,11 @@ I kept the code as original as possible with proper Commented Guides for anyone 
 Download the release APK 
 
 
-
 ## 🔑 License
 - This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
+
+<div align="center">
+
+### Show some ❤️ by starring some of the repositories!
+
+</div>
