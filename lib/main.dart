@@ -9,7 +9,7 @@ void main() {
 }
 
 class BaseApp extends StatelessWidget {
-  const BaseApp({Key? key}) : super(key: key);
+  const BaseApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +17,12 @@ class BaseApp extends StatelessWidget {
       BlocProvider<ThemeCubit>(
         create: (context) => ThemeCubit(),
       )
-    ], child: const MyApp());
+    ], child: const MainApp());
   }
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
