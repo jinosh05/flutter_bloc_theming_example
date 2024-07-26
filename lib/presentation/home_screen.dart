@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text(
-                isDark ? 'Hello,\nGood night 🥱' : 'Hello,\nGood Morning 🌅 ',
+                isDark ? 'Hello,\nGood night 🌙' : 'Hello,\nGood Morning 🌅 ',
                 textAlign: TextAlign.center,
                 style: const TextStyle(height: 1.5, fontSize: 20),
               ),
